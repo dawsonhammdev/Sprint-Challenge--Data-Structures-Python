@@ -20,7 +20,7 @@ class RingBuffer:
 class bufferfull:
 
     def append(self,item):
-            if len(self.data)<self.capacity:
+            if len(self.data) < self.capacity:
                     self.data.insert(self.cur, item)
             else:
                     self.data[self.cur]=item
@@ -28,7 +28,7 @@ class bufferfull:
 
     def remove(self,item):
             if self.data:
-                    if self.capacity>len(self.data):
+                    if self.capacity > len(self.data):
                             self.cur=0
                     self.data.pop(self.cur)
 
